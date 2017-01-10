@@ -41,7 +41,7 @@ func isDir(path string) bool {
 func getGoatPath() string {
 	goats, err := ioutil.ReadDir(goatDir)
 	if err != nil {
-		fmt.Errorf(err.Error())
+		panic(err.Error())
 	}
 	numGoats := len(goats)
 
